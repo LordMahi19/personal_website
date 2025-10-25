@@ -1,0 +1,298 @@
+:root {
+    --primary-color: #007bff;
+    /* A blue to match the CV's feel, replacing orange */
+    --light-gray: #f4f4f4;
+    --text-color: #333;
+    --dark-text: #222;
+    --border-color: #eee;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-gray);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    /* Contains the rounded corners */
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--dark-text);
+    margin: 0;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* --- 1. Header Section (As requested) --- */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+/* Rounded Profile Picture (As requested) */
+#profile-picture {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 4px solid #d5bdaf;
+    /* Using your border color */
+    flex-shrink: 0;
+    /* Prevents image from shrinking */
+}
+
+#personal-info h1 {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+#personal-info h4 {
+    font-size: 1.1em;
+    font-weight: 400;
+    color: #555;
+    margin: 5px 0 15px 0;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    /* Stack the two rows vertically */
+    gap: 10px;
+    /* Space between the two rows */
+}
+
+.contact-info>div {
+    /* Style each row */
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows items to wrap on smaller screens */
+    gap: 10px 20px;
+    /* Row and column gap for items in each row */
+}
+
+.contact-info p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.contact-info p a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* Space between icon and text */
+}
+
+.contact-info p .fa {
+    font-size: 18px;
+    color: #555;
+    /* Consistent icon color */
+    width: 18px;
+    /* Ensure consistent alignment */
+    text-align: center;
+}
+
+.contact-info p strong {
+    margin-right: 5px;
+}
+
+/* --- 2. CV Layout (Two Columns) --- */
+.cv-layout {
+    display: grid;
+    /* 1fr 2.5fr means the first column takes 1 part, the second 2.5 parts */
+    grid-template-columns: 1fr 2.5fr;
+    padding: 30px;
+    gap: 40px;
+}
+
+/* --- 3. Sidebar (Left Column) --- */
+.sidebar {
+    padding-right: 30px;
+    border-right: 2px solid var(--border-color);
+}
+
+.sidebar section {
+    margin-bottom: 30px;
+}
+
+.sidebar h2 {
+    font-size: 1.3em;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* Styling for Hard & Soft Skills */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0;
+    list-style: none;
+}
+
+.skills-list li {
+    background-color: #e9ecef;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+/* Styling for Languages */
+.languages-list {
+    list-style: none;
+    padding: 0;
+}
+
+.languages-list li {
+    margin-bottom: 5px;
+}
+
+.languages-list strong {
+    color: var(--dark-text);
+}
+
+/* Styling for Education & References */
+.sidebar p {
+    margin: 4px 0;
+}
+
+.sidebar .institution {
+    font-weight: 500;
+    color: var(--dark-text);
+}
+
+.sidebar .date,
+.sidebar .role {
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* --- 4. Main Content (Right Column) --- */
+.main-column h2 {
+    font-size: 1.3em;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.main-column section {
+    margin-bottom: 30px;
+}
+
+#about-me p {
+    font-size: 1.05em;
+}
+
+/* Project & Course Styling */
+.project,
+.course {
+    margin-bottom: 25px;
+}
+
+.project h3,
+.course h3 {
+    font-size: 1.15em;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.project h3 a,
+.course h3 a {
+    font-size: 0.9em;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+.project ul {
+    margin-top: 5px;
+    padding-left: 20px;
+}
+
+.project li {
+    margin-bottom: 5px;
+}
+
+.course p {
+    margin: 4px 0 0 0;
+}
+
+.course .provider {
+    font-style: italic;
+    color: #555;
+}
+
+.course .provider-link {
+    font-size: 0.9em;
+}
+
+/* --- 5. Responsive Design (Mobile) --- */
+@media (max-width: 800px) {
+    .cv-layout {
+        /* Stack columns on top of each other */
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .sidebar {
+        border-right: none;
+        padding-right: 0;
+        border-bottom: 2px solid var(--border-color);
+        padding-bottom: 20px;
+    }
+
+    .header {
+        /* Stack header items on mobile */
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .contact-info {
+        /* Center contact items */
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin: 0;
+        border-radius: 0;
+    }
+
+    #personal-info h1 {
+        font-size: 1.5em;
+    }
+
+    #personal-info h4 {
+        font-size: 1em;
+    }
+
+    .header,
+    .cv-layout {
+        padding: 20px;
+    }
+}
