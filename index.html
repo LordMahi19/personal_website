@@ -3,183 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahi Talukder - Software Engineering</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>MD Mahi Al Jubair Talukder - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <div class="container">
-        
-        <!-- === HEADER === -->
-        <!-- This uses your existing HTML structure -->
-        <header class="header">
-            <div id="profile-pic">
-                <!-- Using your mahi.jpg and profile-picture ID -->
+        <header>
+            <div>
                 <img src="mahi.jpg" alt="Mahi Talukder" id="profile-picture">
             </div>
-            <div id="personal-info">
-                <h1>MD MAHI AL JUBAIR TALUKDER</h1>
-                <h4>Software Engineering | Full-Stack Development | Mobile & Backend Solutions</h4>
+            <div>
+                <h1>MD Mahi Al Jubair Talukder</h1>
+                <p class="subtitle">Software Engineer | Full-Stack Developer | ML Enthusiast</p>
                 <div class="contact-info">
-                    <!-- Row 1: Contact Details -->
-                    <div>
-                        <p><a href="mailto:mahualjubairtalukder@gmail.com">mahualjubairtalukder@gmail.com</a></p>
-                        <p><a href="tel:+358415705541">+358415705541</a></p>
-                        <p><a href="https://maps.app.goo.gl/of5LRosk9KyExKoMA">Kutojantie 10A, 02630 Finland</a></p>
-                    </div>
-                    <!-- Row 2: Social Links -->
-                    <div>
-                        <p><a href="https://github.com/LordMahi19" target="_blank"><i class="fa fa-github"></i>LordMahi19</a></p>
-                        <p><a href="https://www.linkedin.com/in/mahitalukder/" target="_blank"><i class="fa fa-linkedin-square"></i>mahitalukder</a></p>
-                        <p><a href="https://x.com/mahi_jubair" target="_blank"><i class="fa fa-twitter"></i>mahi_jubair</a></p>
-                    </div>
+                    <a href="mailto:mahualjubairtalukder@gmail.com">Email</a>
+                    <a href="https://github.com/LordMahi19" target="_blank">GitHub</a>
+                    <span>+358 415 705 541</span>
+                    <span>Kutojantie 10A 636, Finland</span>
                 </div>
             </div>
+            
         </header>
 
-        <!-- === CV LAYOUT (GRID) === -->
-        <div class="cv-layout">
+        <section>
+            <h2>About Me</h2>
+            <div class="about">
+                <p>Motivated software engineering student with hands-on experience in building mobile and web applications, backend systems, and integrating machine learning solutions. Skilled in multiple programming languages and frameworks, with a strong foundation in problem-solving and software development principles. Eager to contribute to innovative projects and grow as a developer in a collaborative environment.</p>
+            </div>
+        </section>
 
-            <!-- === SIDEBAR (LEFT COLUMN) === -->
-            <aside class="sidebar">
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <p>Java, Kotlin, Dart, C/C++, JavaScript, Python, Rust</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Frameworks</h3>
+                    <p>React, React Native, TensorFlow, PyTorch</p>
+                </div>
+                <div class="skill-category">
+                    <h3>ML & Data</h3>
+                    <p>TensorFlow, PyTorch, Tinygrad, scikit-learn, pandas, NumPy, Matplotlib</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools</h3>
+                    <p>Git, MediaPipe, TensorFlow Lite</p>
+                </div>
+            </div>
+        </section>
 
-                <section id="hard-skills">
-                    <h2>HARD SKILLS</h2>
-                    <ul class="skills-list">
-                        <li>Java</li>
-                        <li>Kotlin</li>
-                        <li>Dart</li>
-                        <li>C/C++</li>
-                        <li>JavaScript</li>
-                        <li>Python</li>
-                        <li>Rust</li>
-                        <li>Git</li>
-                        <li>React</li>
-                        <li>React Native</li>
-                        <li>TensorFlow</li>
-                        <li>PyTorch</li>
-                        <li>Tinygrad</li>
-                        <li>scikit-learn</li>
-                        <li>pandas</li>
-                        <li>NumPy</li>
-                        <li>Matplotlib</li>
-                    </ul>
-                </section>
+        <section>
+            <h2>Featured Projects</h2>
+            
+            <div class="project-card">
+                <h3>Sign Language Detection App</h3>
+                <ul>
+                    <li>Developed an Android app to predict and interpret sign language gestures</li>
+                    <li>Trained a custom model and converted it to TensorFlow Lite for efficient mobile inference</li>
+                    <li>Integrated the model using Kotlin with MediaPipe and TensorFlow Lite for real-time prediction</li>
+                </ul>
+                <div class="project-links">
+                    <a href="https://github.com/LordMahi19/signlang_android" target="_blank">View Source</a>
+                </div>
+            </div>
 
-                <section id="soft-skills">
-                    <h2>SOFT SKILLS</h2>
-                    <ul class="skills-list">
-                        <li>Fast Learner</li>
-                        <li>Team Player</li>
-                        <li>Leadership</li>
-                        <li>Energetic</li>
-                    </ul>
-                </section>
+            <div class="project-card">
+                <h3>LLM Integration in Android App</h3>
+                <ul>
+                    <li>Built an Android application leveraging LLaMA 3.1 with 1B parameters</li>
+                    <li>Performed on-device inference using Kotlin with TensorFlow for efficient processing</li>
+                    <li>Optimized for mobile performance and resource management</li>
+                </ul>
+                <div class="project-links">
+                    <a href="https://github.com/LordMahi19" target="_blank">View Profile</a>
+                </div>
+            </div>
 
-                <section id="languages">
-                    <h2>LANGUAGES</h2>
-                    <ul class="languages-list">
-                        <li><strong>Bengali:</strong> Native</li>
-                        <li><strong>English:</strong> Fluent</li>
-                        <li><strong>Suomi:</strong> Basic</li>
-                    </ul>
-                </section>
+            <div class="project-card">
+                <h3>Full-Stack Medical Booking Platform</h3>
+                <ul>
+                    <li>Designed and implemented a full-stack platform for booking appointments with medical experts worldwide</li>
+                    <li>Built user authentication, scheduling system, and notification features</li>
+                    <li>Deployed backend APIs and created responsive UI for seamless user experience</li>
+                </ul>
+                <div class="project-links">
+                    <a href="https://github.com/LordMahi19" target="_blank">View Profile</a>
+                </div>
+            </div>
+        </section>
 
-                <section id="education">
-                    <h2>EDUCATION</h2>
-                    <p class="institution">Software Engineering</p>
-                    <p>LUT University</p>
-                    <p class="date">Expected graduation - 09/25</p>
-                </section>
-            </aside>
+        <section>
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Software Engineering</h3>
+                <p>LUT University, Finland</p>
+                <p>Expected Graduation: September 2025</p>
+            </div>
+        </section>
 
-            <!-- === MAIN CONTENT (RIGHT COLUMN) === -->
-            <main class="main-column">
+        <section>
+            <h2>Certifications</h2>
+            <div class="project-card">
+                <h3>Advanced Programming in Kotlin</h3>
+                <p>Meta • Coursera</p>
+            </div>
+            <div class="project-card">
+                <h3>Introduction to Computer Science</h3>
+                <p>Harvard University • CS50</p>
+            </div>
+            <div class="project-card">
+                <h3>Statistics and Data Analysis</h3>
+                <p>Stanford University</p>
+            </div>
+        </section>
 
-                <section id="about-me">
-                    <h2>ABOUT ME</h2>
-                    <p>
-                        Motivated software engineering student with hands-on experience in building mobile
-                        and web applications, backend systems, and integrating machine learning solutions.
-                        Skilled in multiple programming languages and frameworks, with a strong foundation in
-                        problem-solving and software development principles. Eager to contribute to innova-
-                        tive projects and grow as a developer in a collaborative environment.
-                    </p>
-                </section>
-
-                <section id="projects">
-                    <h2>PROJECTS</h2>
-                    
-                    <article class="project">
-                        <h3>
-                            Sign Language Detection App
-                            <a href="https://github.com/LordMahi19/signlang" target="_blank">[Source]</a>
-                            <a href="https://lut-my.sharepoint.com/:u:/g/personal/mahi_talukder_student_lut_fi/EZM8m7IetShMolTYPE6DPXkBfAM3Nop4aV7j66AOvOqwPA?e=mNuaTs" target="_blank">[Demo]</a>
-                        </h3>
-                        <ul>
-                            <li>Developed an Android app to predict and interpret sign language gestures.</li>
-                            <li>Trained a model and converted it to TensorFlow Lite for efficient mobile inference.</li>
-                            <li>Integrated the model using Kotlin with MediaPipe and TensorFlow Lite for real-time prediction.</li>
-                        </ul>
-                    </article>
-
-                    <article class="project">
-                        <h3>
-                            LLM Integration in Android App
-                            <a href="#" target="_blank">[Source]</a>
-                            <a href="#" target="_blank">[Demo]</a>
-                        </h3>
-                        <ul>
-                            <li>Built an Android application leveraging LLaMA 3.1 (1B parameters).</li>
-                            <li>Performed on-device inference using Kotlin with TensorFlow for efficient processing.</li>
-                        </ul>
-                    </article>
-
-                    <article class="project">
-                        <h3>
-                            Full-Stack Application
-                            <a href="#" target="_blank">[Source]</a>
-                            <a href="#" target="_blank">[Demo]</a>
-                        </h3>
-                        <ul>
-                            <li>Designed and implemented a full-stack platform for booking appointments with medical experts worldwide.</li>
-                            <li>Built user auth, scheduling, and notifications; deployed backend APIs and responsive UI.</li>
-                        </ul>
-                    </article>
-                </section>
-
-                <section id="courses">
-                    <h2>COURSES AND CERTIFICATIONS</h2>
-
-                    <article class="course">
-                        <h3>Advanced Programming in Kotlin</h3>
-                        <p class="provider">by Meta</p>
-                        <p class="provider-link"><a href="https://Coursera.com" target="_blank">Coursera.com</a></p>
-                    </article>
-
-                    <article class="course">
-                        <h3>Introduction to Computer Science</h3>
-                        <p class="provider">by Harvard University</p>
-                        <p class="provider-link"><a href="https://pll.harvard.edu" target="_blank">pll.harvard.edu</a></p>
-                    </article>
-
-                    <article class="course">
-                        <h3>Statistics and Data Analysis</h3>
-                        <p class="provider">by Stanford University</p>
-                        <p class="provider-link"><a href="https://online.stanford.edu" target="_blank">online.stanford.edu</a></p>
-                    </article>
-                </section>
-
-            </main>
-
-        </div> <!-- end .cv-layout -->
-
-    </div> <!-- end .container -->
-
+        <footer>
+            <p>&copy; 2025 MD Mahi Al Jubair Talukder. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
-
